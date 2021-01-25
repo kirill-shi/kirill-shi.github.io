@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="style3.css">
+
     <style>
+        
     body {
         display: flex;
         height: 100vh;
@@ -51,14 +54,16 @@
         position: absolute;
         right: 30%;
     }
-    .download {
+    
+        .download {
+
         font-family: 'Cartoons 123';
         font-size: 60px;
         border: 5px solid white;
         color: white;
         padding: .25em;
         margin-bottom: 1em;
-        
+        cursor: pointer;
     }
 
     @keyframes onloadLeft {
@@ -83,10 +88,31 @@
             right: 10%;
         }
     }
+    
+    .mid{
+
+
+        margin-top: 6em;
+        padding: 1.5em 2em;
+        font-size: 1.5em;
+        background-color: wheat;
+    }
+    .bot {
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bot .conteiner {
+        padding: 1.25em;
+        flex-basis: 75%;
+    }
     </style>
 </head>
 <body>
-    <h1>LITT LE KINGDOM</h1>
+    <section class="top">
+    <h1>LITTLE KINGDOM</h1>
     <div class="knights">
         <div class="left">
 
@@ -96,5 +122,12 @@
         </div>
     </div>
     <div class="download">DOWNLOAD</div>
+</section>
+<section class="mid">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quisquam, temporibus natus facilis quod voluptatibus dolorum laborum aut eos eaque rem harum ullam omnis nobis culpa id vitae voluptas veritatis.
+</section>
+<section class="bot">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae earum, quos facilis debitis molestias sed explicabo sit numquam optio esse rerum quidem praesentium alias eius eos id, nemo blanditiis exercitationem?
+</section>
 </body>
 </html>
