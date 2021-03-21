@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+<script>
+        
+            function buyElephant(answer) {
+                if (answer === null) {
+                    return false
+                }
+                return true
+            }
+
+            let userInput = prompt('Купи 🧠');
+            let answer = buyElephant(userInput);
+
+            while (answer) {
+                userInput = prompt('Все говорят ' + userInput + ' а ты купи 🧠');
+                answer = buyElephant(userInput);
+            }
+
+</script>
+</body>
+
+</html>
