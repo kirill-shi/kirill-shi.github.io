@@ -1,0 +1,21 @@
+$Underdog: 'Underdog'!default; 
+$segoe: 'Segoe Print' !default;
+
+h1, h2, h3, h4, h5, h6 
+      { font-family: $Underdog;
+}
+
+p {
+    font-family: $segoe;
+}
+
+
+
+button, input[type=submit] {
+
+font-family: $Underdog;
+
+}
+a{
+font-family: $segoe;
+}
