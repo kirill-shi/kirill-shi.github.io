@@ -5,6 +5,10 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="css1/style-проект.css">
+      <!-- <link
+      href="https://fonts.googleapis.com/css?family=Ruslan+Display&display=swap"
+      rel="stylesheet"/> -->
+      <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=VyumUb8t3cLWgiuBrRkefKJ1G74_t0MUaMf4yAxrUa0nUX-bl4U68KopeYxF7dSAjKqhg4ILsRKadv-nOnRePA" charset="UTF-8"></script><script src="https://js.cx/libs/animate.js"></script>
     </head>
 
     <body>
@@ -24,47 +28,59 @@
    </div>        
  </nav>
 
+ <!-- <div class="container">
+   <img class="spiderman" src="https://i.ibb.co/XDFkXMx/spiderman-colgado.png" alt="" />
+   <div class="shadow"></div>
+ </div> -->
+
+
  <header class="section-header">
-   <div class="section-header-wrapper">     
+   <div class="section-header-wrapper"> 
+      <div id="oval"> </div>
+      
+ 
+
       <div class="herobox">           
           <div class="herobox__title1">           
             <h2>           
             ингредиенты            
-            </h2>            
+            </h2>  
+            <div class="table1" >      
             <p>  
                <table>       
                <tr>
-                  <td> Молоко </td>
-                  <td> 1 стака </td>
+                  <td align="left"> Молоко </td>
+                  <td align="right"> 1 стака </td>
                   </tr>
                   <tr>
-                  <td> Куриное яйцо </td>
-                  <td>  1 штука </td>
+                  <td align="left"> Куриное яйцо </td>
+                  <td align="right">  1 штука </td>
                   </tr>
                   <tr>
-                  <td> соль </td>
-                  <td> щепотка </td>
+                  <td align="left"> соль </td>
+                  <td align="right"> щепотка </td>
                   </tr>
                   <tr>
-                  <td> сахар </td>
-                  <td> 1столовой ложки </td>
+                  <td align="left"> сахар </td>
+                  <td align="right"> 1столовой ложки </td>
                   </tr>
                   <tr>
-                  <td> пшеничная мука </td>
-                  <td>  8 столовых ложек </td>
+                  <td align="left"> пшеничная мука </td>
+                  <td align="right">  8 столовых ложек </td>
                   </tr>
                   <tr>
-                  <td>Растительное масло
-                 </td>
-                  <td> 1чайной ложки </td>
+                  <td align="left">Растительное масло</td>
+                  <td align="right"> 1чайной ложки </td>
                   </tr>
                   <tr>
-                  <td> Разрыхлитель </td>
-                  <td> на кончике ножа </td>
+                  <td align="left"> Разрыхлитель </td>
+                  <td align="right"> на кончике ножа </td>
                   </tr>
                   </table>           
-               </P>           
-            </div>                     
+               </P> 
+               </div>            
+            </div>  
+                        
    </div>        
      <div class="section-header-wrapper__image"></div>         
    </div>           
@@ -97,12 +113,14 @@
                      <td> 4.На сильно раскаленную сковороду налить немного масла и жарить блины. </td>
                      </tr>
                      <tr>
-                     </table>           
-           </p>
+                </table>           
+              </p>
         </div>
     </div>
    </div>
 </section>
+
+
 
 <section class="section-contact">
    <div class="section-contact-wrapper">   
@@ -111,6 +129,20 @@
     </div>  
   </div>    
 </section>
+
+<script>
+    oval.onclick = function() {
+      animate({
+        duration: 3000,
+        timing: function elastic(x, timeFraction) {
+          return Math.pow(2, 10 * (timeFraction - 1)) * Math.cos(20 * Math.PI * x / 3 * timeFraction)
+        }.bind(null, 1.5),
+        draw: function(progress) {
+          oval.style.left = progress * 5000 + 'px';
+        }
+      });
+    };
+</script>
    </body>
    </html>
 
