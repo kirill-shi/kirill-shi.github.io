@@ -1,0 +1,15 @@
+#oval {
+    width: 200px;
+    height: 100px;
+    background: #e9337c;
+    -webkit-border-radius: 100px / 50px;
+    -moz-border-radius: 100px / 50px;
+    border-radius: 100px / 50px;
+    position: relative;
+    cursor: pointer;
+}
+#path {
+    outline: 1px solid #E8C48E;
+    width: 540px;
+    height: 20px;
+  }
