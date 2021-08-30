@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=VyumUb8t3cLWgiuBrRkefKJ1G74_t0MUaMf4yAxrUa0nUX-bl4U68KopeYxF7dSAjKqhg4ILsRKadv-nOnRePA" charset="UTF-8"></script><script src="https://js.cx/libs/animate.js"></script>
+
+  <style>
+      #brick {
+        width: 200px;
+    height: 100px;
+    background: #e9337c;
+    -webkit-border-radius: 100px / 50px;
+    -moz-border-radius: 100px / 50px;
+    border-radius: 100px / 50px;
+  background: #EE6B47;
+  position: relative;
+  cursor: pointer;
+}
+
+
+  </style>
+</head>
+
+<body>
+
+
+  
+    <div id="path">
+        <div id="brick"></div>
+      </div>
+    
+
+
+  <script>
+    brick.onclick = function() {
+      animate({
+        duration: 3000,
+        timing: function elastic(x, timeFraction) {
+          return Math.pow(2, 10 * (timeFraction - 1)) * Math.cos(20 * Math.PI * x / 3 * timeFraction)
+        }.bind(null, 1.5),
+        draw: function(progress) {
+          brick.style.left = progress * 5000 + 'px';
+        }
+      });
+    };
+  </script>
+
+
+</body>
+
+</html>

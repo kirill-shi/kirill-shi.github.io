@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #67688d;
+            overflow: hidden;
+        }
+
+        svg {
+            position: absolute;
+            top: 40%;
+            left: 12%;
+        }
+
+        main h1 {
+            font-size: 5em;
+            font-family: -apple-system, sans-serif;
+            color: #fff;
+            position: absolute;
+            top: 40%;
+            left: 12%;
+            opacity: 0;
+            z-index: 2;
+        }
+
+        main h1::first-letter {
+            color: #fd0054;
+        }
+
+        .box {
+            position: absolute;
+            top: 30%;
+            right: 12%;
+            width: 200px;
+            height: 200px;
+            border: 15px solid #fd0054;
+        }
+
+        .bar {
+            position: relative;
+            align-self: flex-end;
+            width: 0;
+            height: 20px;
+            border-radius: 50px;
+            background-color: #fef200;
+            margin: 2em;
+        }
+
+        .bar > h4 {
+            font-size: 2em;
+            font-family: monospace;
+            color: #fff;
+            text-align: center;
+            opacity: 0;
+        }
+
+        .info {
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+        }
+
+        .el1, .el2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: stretch;
+            text-align: center;
+            width: 50%;
+            flex-direction: column;
+            font-size: 2em;
+            font-weight: bold;
+            font-family: monospace;
+            color: white;
+            padding: 1em;
+        }
+        .el1 {
+            background-color: #7a57d1;
+        }
+        .el2 {
+            background-color: #4fc1e9;
+        }
+
+        .text {
+            padding: 1em;
+        }
+        .value {
+            font-size: 3em;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>
+            EXAMPLE
+        </h1>    
+        <div class="box"></div>
+        <div class="bar">
+            <h4>SCROLL DOWN</h4>
+        </div>
+    </main>
+    <div class="info">
+        <div class="el1">
+            <div class="text">Всего времени</div>
+            <div class="value">0</div>
+        </div>
+        <div class="el2">
+            <div class="text">Количество сайтов</div>
+            <div class="value">0</div>
+        </div>
+    </div>
+
+    <script>
+        let main = document.querySelector('main');
+        
+        let mainHeader = document.querySelector('main > h1');
+        let box = document.querySelector('.box');
+
+        let bar = document.querySelector('main > .bar');
+        let secondaryText = document.querySelector('main > .bar > h4');
+        
+        let el1 = document.querySelector('.el1 > .value');
+        let el2 = document.querySelector('.el2 > .value');
+        let elementPos = el1.offsetTop;
+
+        let counter = anime({
+            targets: [el1, el2],
+            innerHTML: [0, 1000],
+            easing: 'linear',
+            round: 1,
+            delay: 250,
+            duration: 1000,
+            autoplay: false
+        });
+
+        document.addEventListener('scroll', scrollEvent)
+
+        let animation = false
+        function scrollEvent(event) {
+            let posY = window.scrollY + window.innerHeight;
+            if ((posY - elementPos > 0) && !animation) {
+                animation = true;
+                counter.play();
+            }
+        }
+
+        anime({
+             targets: main,
+             backgroundColor: '#2a2b5f',
+             easing: 'easeInOutQuar',
+             duration: 1000,
+        });
+
+        anime({
+            targets: mainHeader,
+            top: '35%',
+            opasity: 1,
+            duration: 1500
+        })
+         
+        anime({
+            targets:box,
+
+        })
+
+        anime({
+            targets:bar,
+            width:'100%',
+            easing: 'easeIn'
+        })
+     
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+@import './reset1';
+@import './colors1';
+@import './text_setup1';
+@import './navbar1';
+
+.section-navbar-wrapper, header, footer > .section-footer-wrapper, section{
+    max-width: 1360px;
+    margin: auto;
+}
